@@ -4,9 +4,14 @@ export default {
 		nosnapshots: 'No snapshots taken yet',
 		learn: 'Learn',
 	},
+	fr: {
+		cameraroll: 'Rouleau de caméra',
+		nosnapshots: "Aucun instantané pris pour l'instant",
+		learn: 'Apprendre',
+	},
 	es: {
-		cameraroll: 'Rollo de la Cámara',
-		nosnapshots: 'Aún no se han tomado instantáneas',
+		cameraroll: 'Galería de fotos',
+		nosnapshots: 'Aún no se han capturado fotografías',
 		learn: 'Aprender',
 	},
 	pt: {

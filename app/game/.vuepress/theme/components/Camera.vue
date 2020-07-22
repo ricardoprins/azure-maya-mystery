@@ -1,20 +1,20 @@
 <template>
   <div class="markdown-body">
-    <p class="text-2xl pb-5 pt-5 ml-5 text-sans text-white">{{ $t('cameraroll') }}</p>
-    <div class="p-5">
-      <div v-if="items.length == 0">
-        <span class="text-white">{{ $t('nosnapshots') }}</span>
+    <p class="text-2xl pb-5 pt-5 ml-5 text-sans text-white text-left">{{ $t('cameraroll') }}</p>
+    <div class="p-5 text-left">
+      <div v-if="polaroids.length == 0">
+        <span class="text-white text-left">{{ $t('nosnapshots') }}</span>
       </div>
       <div v-else>
         <div class="wrapper">
-          <div v-for="item in items" class="item">
+          <div v-for="item in polaroids" class="item">
             <div class="polaroid">
               <span class="container">
-                <img :src="'/images/' + item.filename + '.png'" />
+                <img :src="getUrl(item.filename)" alt="a Maya glyph" />
               </span>
               <div class="caption">
                 <a :href="item.url" target="_blank">{{ $t('learn') }}</a>
-                <p class="text-sm leading-snug" v-if="item.clues">{{ getLocalizedClue(item) }}</p>
+                <p class="text-sm leading-snug">{{ getLocalizedClue(item) }}</p>
               </div>
             </div>
           </div>
@@ -27,6 +27,8 @@
 import { getItems, getLocale } from "@theme/utils/helpers";
 const items = require("@theme/utils/items.json");
 import messages from "../translations/camera.js";
+import { EventBus } from "@theme/utils/event-bus";
+import { i18n } from "@theme/utils/i18n";
 
 export default {
   name: "Camera",
@@ -34,39 +36,50 @@ export default {
     messages
   },
 
-  created() {
-    this.showCameraItems();
-    this.$i18n.locale = getLocale();
-  },
-
   data() {
-    this.$root.$on("item_added", id => {
-      this.showCameraItems();
-    });
-    this.$root.$on("lang_changed", lang => {
-      this.$i18n.locale = lang;
-    });
-    return {
-      items: []
-    };
+    let obj = { polaroids: [] };
+    return obj;
   },
   methods: {
     showCameraItems() {
       var ids = getItems();
-      this.items = ids.map(id => items.find(item => item.id == id));
-      return items;
+      this.polaroids = ids.map(id => items.find(item => item.id == id));
     },
     getLocalizedClue(item) {
+      if (!item.clues) {
+        return "";
+      }
       let currItem = item;
       if (this.$i18n.locale == "es") {
         currItem = currItem.clues.es.clue;
       } else if (this.$i18n.locale == "pt") {
         currItem = currItem.clues.pt.clue;
+      } else if (this.$i18n.locale == "fr") {
+        currItem = currItem.clues.fr.clue;
       } else {
         currItem = currItem.clues.en.clue;
       }
       return currItem;
+    },
+    getUrl(name) {
+      if (name) {
+        return this.$withBase("/images/" + name + ".png");
+      }
+      return "";
     }
+  },
+  created() {
+    this.showCameraItems();
+    this.$i18n.locale = getLocale();
+    EventBus.$on("item_added", id => {
+      this.showCameraItems();
+    });
+    EventBus.$on("lang_changed", lang => {
+      this.$i18n.locale = lang;
+    });
+  },
+  beforeDestroy() {
+    //EventBus.$off("lang_changed");
   }
 };
 </script>

@@ -2,19 +2,27 @@
   <div v-if="item.filename != ''" @click="takePic(item)">
     <p v-if="showInstructions">
       {{ getLocalizedInstructions }}
-      <a onclick="return false" href>{{ getLocalizedName }}</a>
+      <button
+        type="button"
+        class="bg-transparent font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        aria-expanded="false"
+        onclick="return false"
+        href
+      >{{ getLocalizedName }}</button>
     </p>
   </div>
   <div v-else>
     <p @click="emitResult(item)">
-      {{getLocalizedInstructions}}
-      <a
-        href
+      {{ getLocalizedInstructions }}
+      <button
+        type="button"
+        class="bg-transparent font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        aria-expanded="false"
         onclick="return false"
         @click="showResult = !showResult"
-      >{{getLocalizedName}}</a>
+      >{{ getLocalizedName }}</button>
     </p>
-    <p v-if="showResult">{{getLocalizedResult}}</p>
+    <p v-if="showResult">{{ getLocalizedResult }}</p>
   </div>
 </template>
 <script>
@@ -27,8 +35,16 @@ import {
   getLocale
 } from "@theme/utils/helpers";
 import axios from "axios";
+import messages from "@theme/translations/misc.js";
+import { EventBus } from "@theme/utils/event-bus";
+import { i18n } from "@theme/utils/i18n";
 
 export default {
+  props: ["id"],
+
+  i18n: {
+    messages
+  },
   computed: {
     item() {
       let item = items.find(row => row.id == this.id);
@@ -41,6 +57,8 @@ export default {
         currItem = currItem.instructions.es.instruction;
       } else if (this.$i18n.locale == "pt") {
         currItem = currItem.instructions.pt.instruction;
+      } else if (this.$i18n.locale == "fr") {
+        currItem = currItem.instructions.fr.instruction;
       } else {
         currItem = currItem.instructions.en.instruction;
       }
@@ -52,6 +70,8 @@ export default {
         currItem = currItem.result.es.result;
       } else if (this.$i18n.locale == "pt") {
         currItem = currItem.result.pt.result;
+      } else if (this.$i18n.locale == "fr") {
+        currItem = currItem.result.fr.result;
       } else {
         currItem = currItem.result.en.result;
       }
@@ -63,6 +83,8 @@ export default {
         currItem = currItem.name.es.name;
       } else if (this.$i18n.locale == "pt") {
         currItem = currItem.name.pt.name;
+      } else if (this.$i18n.locale == "fr") {
+        currItem = currItem.name.fr.name;
       } else {
         currItem = currItem.name.en.name;
       }
@@ -80,13 +102,11 @@ export default {
   methods: {
     takePic(item) {
       //generate a json object to send to playfab
-      var locale = this.$i18n.locale;
       var jsonData = {};
       var columnName = item.id;
       jsonData[columnName] = item.gameItem;
-
       axios
-        .post("/api/login", {
+        .post("https://maya-mystery-api.azurewebsites.net/api/updateData", {
           Data: jsonData
         })
         .then(response => {
@@ -96,16 +116,16 @@ export default {
           console.log(error);
         });
 
-      let addOk = confirm("Take a picture?");
+      let addOk = confirm(this.$t("takepic"));
       if (addOk) {
         addItem(item.id);
-        this.$root.$emit("item_added", item.id);
+        EventBus.$emit("item_added", item.id);
         //you got the picture, so hide the prompt
         this.showInstructions = false;
       }
     },
     emitResult(item) {
-      this.$root.$emit("showResult", item.id);
+      EventBus.$emit("showResult", item.id);
     },
     callback(e) {
       console.log(e);
@@ -113,7 +133,10 @@ export default {
   },
   created() {
     this.$i18n.locale = getLocale();
+    EventBus.$on("lang_changed", lang => (this.$i18n.locale = lang));
   },
-  props: ["id"]
+  beforeDestroy() {
+    //EventBus.$off("lang_changed");
+  }
 };
 </script>

@@ -8,16 +8,22 @@
 			"en": {
 				"instruction": "Unfold the"
 			},
+			"fr": {
+				"instruction": "Dépliez le"
+			},
 			"pt": {
 				"instruction": "Desenrolar o"
 			}
 		},
 		"name": {
 			"es": {
-				"name": "mapa desvanecido"
+				"name": "mapa desvaído"
 			},
 			"en": {
 				"name": "faded map"
+			},
+			"fr": {
+				"name": "carte décolorée"
 			},
 			"pt": {
 				"name": "mapa desbotado"
@@ -28,10 +34,13 @@
 		"initialHide": false,
 		"result": {
 			"es": {
-				"result": "Despliegas el mapa, pero según tus coordenadas, no debería haber nada aquí. Bien podría guardarlo."
+				"result": "Despliegas el mapa, pero de acuerdo con sus coordenadas, no debería haber nada aquí. Bien podrías guardarlo."
 			},
 			"en": {
 				"result": "You unfold the map, but according to your coordinates, there shouldn't be anything here. May as well put it away."
+			},
+			"fr": {
+				"result": "Vous dépliez la carte, mais selon vos coordonnées, il ne devrait rien y avoir ici. Il vaut mieux la ranger."
 			},
 			"pt": {
 				"result": "Você desenrola o mapa, mas de acordo com suas coordenadas, não deveria haver nada aqui. Pode até guardar o mapa."
@@ -47,6 +56,9 @@
 			"en": {
 				"instruction": "Take out the"
 			},
+			"fr": {
+				"instruction": "Sortez le"
+			},
 			"pt": {
 				"instruction": "Pegar a"
 			}
@@ -57,6 +69,9 @@
 			},
 			"en": {
 				"name": "camera"
+			},
+			"fr": {
+				"name": "appareil photo"
 			},
 			"pt": {
 				"name": "câmera"
@@ -72,6 +87,9 @@
 			"en": {
 				"result": "You take out your trusty camera and look around."
 			},
+			"fr": {
+				"result": "Vous sortez votre fidèle appareil photo et regardez autour de vous."
+			},
 			"pt": {
 				"result": "Você pega sua câmera confiável e olha em volta."
 			}
@@ -81,10 +99,13 @@
 		"id": 3,
 		"instructions": {
 			"es": {
-				"instruction": "Saque su"
+				"instruction": "Saca tu"
 			},
 			"en": {
 				"instruction": "Take out your"
+			},
+			"fr": {
+				"instruction": "Sortez votre"
 			},
 			"pt": {
 				"instruction": "Retire o seu"
@@ -92,10 +113,13 @@
 		},
 		"name": {
 			"es": {
-				"name": "libro guía"
+				"name": "guía"
 			},
 			"en": {
 				"name": "guide book"
+			},
+			"fr": {
+				"name": "guide"
 			},
 			"pt": {
 				"name": "livro guia"
@@ -106,7 +130,10 @@
 		"initialHide": true,
 		"result": {
 			"es": {
-				"result": "Sacas tu guía de tu mochila y la abres, pero las páginas se mantienen juntas debido al clima húmedo y es apenas legible."
+				"result": "Sacas tu guía de la mochila y la abres, pero las páginas están pegadas debido al clima húmedo y es apenas es legible."
+			},
+			"fr": {
+				"result": "Vous sortez votre guide de votre sac à dos et l'ouvrez, mais les pages collent les unes aux autres à cause du climat humide et il est à peine lisible."
 			},
 			"en": {
 				"result": "You take your guide book out of your backpack and open it, but the pages stick together due to the damp climate and it's barely legible."
@@ -125,6 +152,9 @@
 			"en": {
 				"instruction": "Look at the"
 			},
+			"fr": {
+				"instruction": "Regardez le"
+			},
 			"pt": {
 				"instruction": "Olhe para o"
 			}
@@ -136,34 +166,43 @@
 			"en": {
 				"name": "glyph"
 			},
+			"fr": {
+				"name": "glyphe"
+			},
 			"pt": {
 				"name": "glifo"
 			}
 		},
 		"gameItem": "snake glyph",
-		"filename": "snake",
+		"filename": "4",
 		"initialHide": true,
 		"clues": {
 			"es": {
-				"clue": "4: El idioma que lleva el nombre de esta criatura convierte el código fuente en código de bytes que se puede ejecutar en cualquier plataforma compatible."
+				"clue": "4: El lenguaje que lleva el nombre de esta criatura convierte el código fuente en código de bytes que se puede ejecutar en cualquier plataforma compatible."
 			},
 			"en": {
 				"clue": "4: The language named after this creature turns source code into byte code which can be run on any supported platform."
+			},
+			"fr": {
+				"clue": "4: Le langage nommé d'après cette créature transforme le code source en code octet qui peut être exécuté sur n'importe quelle plate-forme prise en charge."
 			},
 			"pt": {
 				"clue": "4: A linguagem com o nome desta criatura transforma o código-fonte em código de bytes que pode ser executado em qualquer plataforma suportada."
 			}
 		},
-		"url": "https://docs.microsoft.com/en-us/learn/modules/intro-to-python/2-what-is-python/?WT.mc_id=mayamystery-playfab-jelooper"
+		"url": "https://docs.microsoft.com/learn/modules/intro-to-python/2-what-is-python/?WT.mc_id=mayamystery-playfab-jelooper"
 	},
 	{
 		"id": 5,
 		"instructions": {
 			"es": {
-				"instruction": "Cepille la suciedad del"
+				"instruction": "Sacudir la suciedad del"
 			},
 			"en": {
 				"instruction": "Brush off the dirt from the"
+			},
+			"fr": {
+				"instruction": "Brossez la saleté du"
 			},
 			"pt": {
 				"instruction": "Retire a sujeira do"
@@ -176,34 +215,43 @@
 			"en": {
 				"name": "glyph"
 			},
+			"fr": {
+				"name": "glyphe"
+			},
 			"pt": {
 				"name": "glifo"
 			}
 		},
 		"gameItem": "earth glyph",
-		"filename": "earth",
+		"filename": "5",
 		"initialHide": true,
 		"clues": {
 			"es": {
-				"clue": "1: la longitud mide alrededor de _____ de este a oeste, con 0 ° en el primer meridiano."
+				"clue": "1: La longitud mide alrededor de _____ de este a oeste, con 0° en el primer meridiano."
 			},
 			"en": {
 				"clue": "1: Longitude measures around the _____ from east to west, with 0° at the Prime Meridian"
 			},
+			"fr": {
+				"clue": "1: La longitude mesure autour du _____ d'est en ouest, avec 0° au premier méridien"
+			},
 			"pt": {
-				"clue": "1: A longitude mede em torno de _____ de leste a oeste, com 0 ° no Meridiano de Greenwich"
+				"clue": "1: A longitude mede em torno de _____ de leste a oeste, com 0° no Meridiano de Greenwich"
 			}
 		},
-		"url": "https://docs.microsoft.com/en-us/learn/modules/azure-maps-track-air-pollution/5-show-web-page/?WT.mc_id=mayamystery-playfab-jelooper"
+		"url": "https://docs.microsoft.com/learn/modules/azure-maps-track-air-pollution/5-show-web-page/?WT.mc_id=mayamystery-playfab-jelooper"
 	},
 	{
 		"id": 6,
 		"instructions": {
 			"es": {
-				"instruction": "Retire la hoja de la"
+				"instruction": "Retira la hoja del"
 			},
 			"en": {
 				"instruction": "Remove the leaf from the"
+			},
+			"fr": {
+				"instruction": "Retirez la feuille du"
 			},
 			"pt": {
 				"instruction": "Retire a folha do"
@@ -216,34 +264,43 @@
 			"en": {
 				"name": "glyph"
 			},
+			"fr": {
+				"name": "glyphe"
+			},
 			"pt": {
 				"name": "glifo"
 			}
 		},
 		"gameItem": "wind glyph",
-		"filename": "wind",
+		"filename": "6",
 		"clues": {
 			"es": {
-				"clue": "2: Usando el parámetro Measure, puede medir la velocidad de este"
+				"clue": "2: Usando el parámetro Measure, puedes medir la velocidad de este objeto"
 			},
 			"en": {
 				"clue": "2: Using the Measure parameter, you can measure the speed of this"
+			},
+			"fr": {
+				"clue": "2: En utilisant le paramètre Mesurer, vous pouvez mesurer la vitesse de ceci"
 			},
 			"pt": {
 				"clue": "2: Usando o parâmetro Measure, você pode medir a velocidade deste"
 			}
 		},
 		"initialHide": true,
-		"url": "https://docs.microsoft.com/en-us/connectors/msnweather/?WT.mc_id=mayamystery-playfab-jelooper"
+		"url": "https://docs.microsoft.com/connectors/msnweather/?WT.mc_id=mayamystery-playfab-jelooper"
 	},
 	{
 		"id": 7,
 		"instructions": {
 			"es": {
-				"instruction": "Retener las vides de la"
+				"instruction": "Contener las enredaderas lejos del"
 			},
 			"en": {
 				"instruction": "Hold back the vines from the"
+			},
+			"fr": {
+				"instruction": "Retenez les vignes du"
 			},
 			"pt": {
 				"instruction": "Afaste as videiras do"
@@ -256,25 +313,31 @@
 			"en": {
 				"name": "glyph"
 			},
+			"fr": {
+				"name": "glyphe"
+			},
 			"pt": {
 				"name": "glifo"
 			}
 		},
 		"gameItem": "tree glyph",
-		"filename": "tree",
+		"filename": "7",
 		"clues": {
 			"es": {
-				"clue": "3: Machine Learning puede ayudarlo a predecir la prevalencia de este tipo de especies"
+				"clue": "3: El Aprendizaje de Máquinas puede ayudarte a predecir la prevalencia de este tipo de especies"
 			},
 			"en": {
 				"clue": "3: Machine Learning can help you predict the prevalence of this kind of species"
+			},
+			"fr": {
+				"clue": "3: L'apprentissage automatique peut vous aider à prédire la prévalence de ce type d'espèces"
 			},
 			"pt": {
 				"clue": "3: Machine Learning pode ajudar a prever a prevalência desse tipo de espécie"
 			}
 		},
 		"initialHide": true,
-		"url": "https://docs.microsoft.com/en-us/learn/modules/introduction-to-classification/?WT.mc_id=mayamystery-playfab-jelooper"
+		"url": "https://docs.microsoft.com/learn/modules/introduction-to-classification/?WT.mc_id=mayamystery-playfab-jelooper"
 	},
 	{
 		"id": 8,
@@ -284,6 +347,9 @@
 			},
 			"en": {
 				"instruction": "Examine the"
+			},
+			"fr": {
+				"instruction": "Examiner le"
 			},
 			"pt": {
 				"instruction": "Examinar o"
@@ -296,6 +362,9 @@
 			"en": {
 				"name": "blue glyph"
 			},
+			"fr": {
+				"name": "glyphe bleu"
+			},
 			"pt": {
 				"name": "glifo azul"
 			}
@@ -303,16 +372,19 @@
 		"gameItem": "blue glyph - cloud",
 		"filename": "title",
 		"initialHide": true,
-		"url": "https://docs.microsoft.com/en-us/learn/modules/principles-cloud-computing/?WT.mc_id=mayamystery-playfab-jelooper"
+		"url": "https://docs.microsoft.com/learn/modules/principles-cloud-computing/?WT.mc_id=mayamystery-playfab-jelooper"
 	},
 	{
 		"id": 9,
 		"instructions": {
 			"es": {
-				"instruction": "Ve a la izquierda hacia el"
+				"instruction": "Ve a la izquierda hacia la"
 			},
 			"en": {
 				"instruction": "Go left towards the"
+			},
+			"fr": {
+				"instruction": "Allez à gauche vers l'"
 			},
 			"pt": {
 				"instruction": "Vá para a esquerda em direção à"
@@ -325,6 +397,9 @@
 			"en": {
 				"name": "staircase"
 			},
+			"fr": {
+				"name": "escalier"
+			},
 			"pt": {
 				"name": "escadaria"
 			}
@@ -334,10 +409,13 @@
 		"initialHide": true,
 		"result": {
 			"es": {
-				"result": "Bajas las escaleras, pero encuentras otra puerta cerrada. Regresas a la entrada."
+				"result": "Bajas las escaleras, pero encuentras otra puerta cerrada. Vuelves a la entrada."
 			},
 			"en": {
 				"result": "You go down the staircase, but find another locked door. You return to the entryway."
+			},
+			"fr": {
+				"result": "Vous descendez l'escalier, mais trouvez une autre porte verrouillée. Vous revenez à l'entrée."
 			},
 			"pt": {
 				"result": "Você desce a escada, mas encontra outra porta trancada. Você volta para a entrada."
@@ -348,10 +426,13 @@
 		"id": 10,
 		"instructions": {
 			"es": {
-				"instruction": "Agachándote, vuelves a montar el primero"
+				"instruction": "Agachándote, vuelves a armar el primer"
 			},
 			"en": {
 				"instruction": "Stooping down, you reassemble the first"
+			},
+			"fr": {
+				"instruction": "En vous baissant, vous remontez le premier"
 			},
 			"pt": {
 				"instruction": "Abaixando-se, você remonta o primeiro"
@@ -364,23 +445,29 @@
 			"en": {
 				"name": "glyph"
 			},
+			"fr": {
+				"name": "glyphe"
+			},
 			"pt": {
 				"name": "glifo"
 			}
 		},
 		"gameItem": "jaguar glyph",
-		"filename": "jaguar",
+		"filename": "10",
 		"initialHide": true,
-		"url": "https://docs.microsoft.com/en-us/learn/modules/bash-introduction/3-bash-commands/?WT.mc_id=mayamystery-playfab-jelooper"
+		"url": "https://docs.microsoft.com/learn/modules/bash-introduction/3-bash-commands/?WT.mc_id=mayamystery-playfab-jelooper"
 	},
 	{
 		"id": 11,
 		"instructions": {
 			"es": {
-				"instruction": "Reuniendo varias piezas, vuelves a montar el segundo"
+				"instruction": "Reuniendo varias piezas, vuelves a armar el segundo"
 			},
 			"en": {
 				"instruction": "Gathering up several pieces, you reassemble the second"
+			},
+			"fr": {
+				"instruction": "Rassemblant plusieurs pièces, vous remontez le deuxième"
 			},
 			"pt": {
 				"instruction": "Reunindo várias peças, você remonta o segundo"
@@ -393,13 +480,16 @@
 			"en": {
 				"name": "glyph"
 			},
+			"fr": {
+				"name": "glyphe"
+			},
 			"pt": {
 				"name": "glifo"
 			}
 		},
 		"gameItem": "macaw glyph",
-		"filename": "macaw",
+		"filename": "11",
 		"initialHide": true,
-		"url": "https://docs.microsoft.com/en-us/learn/modules/cv-classify-bird-species/?WT.mc_id=mayamystery-playfab-jelooper"
+		"url": "https://docs.microsoft.com/learn/modules/cv-classify-bird-species/?WT.mc_id=mayamystery-playfab-jelooper"
 	}
 ]
